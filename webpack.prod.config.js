@@ -4,7 +4,7 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
 
 module.exports = {
-	entry: path.join(__dirname,'src','index.js'),
+	entry: path.join(__dirname,'src','index.jsx'),
 	output: {
 		path: path.join(__dirname,'build'),
 		filename: 'index.[contenthash].bundle.js'
@@ -14,6 +14,9 @@ module.exports = {
 	// 	modules: [path.resolve(__dirname,'src'), 'node_modules']
 	// }, 
 	//allows us to import from the src folder or node_modules folder without absolute paths
+	resolve: {
+		extensions: ['.js', '.jsx', '.tsx']
+	},
 	plugins: [
 		new MiniCssExtractPlugin({
 			filename: 'styles.[contenthash].css'

@@ -1,0 +1,11 @@
+config/
+nodule_modules/
+public/
+scripts/
+src/serviceWorker.js
+src/setupProxy.js
+src/others/
+src/reducers/
+*.config.js
+
+gulpfile.js

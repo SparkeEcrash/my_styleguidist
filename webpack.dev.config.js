@@ -3,7 +3,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
 
 module.exports = {
-	entry: path.join(__dirname,'src','index.js'),
+	entry: path.join(__dirname,'src','index.jsx'),
 	output: {
 		path: path.join(__dirname,'build'),
 		filename: 'index.bundle.js'
@@ -13,9 +13,13 @@ module.exports = {
 	// 	modules: [path.resolve(__dirname,'src'), 'node_modules']
 	// }, 
 	//allows us to import from the src folder or node_modules folder without absolute paths
+	resolve: {
+		extensions: ['.js', '.jsx', '.tsx']
+	},
 	devServer: {
 		contentBase: path.join(__dirname, 'src'),
-		port: 9000
+		port: 9000,
+		clientLogLevel: 'none'
 	},
 	plugins: [
 		new CleanWebpackPlugin({

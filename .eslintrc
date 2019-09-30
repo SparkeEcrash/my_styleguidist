@@ -1,0 +1,22 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "rules": {
+    "arrow-parens": "off",
+    "comma-dangle": "off",
+    "function-paren-newline": "off",
+    "max-len": [1, 120],
+    "no-param-reassign": "off",
+		"react/require-default-props": "off",
+
+		"no-tabs": 0,
+		"no-undef": 0,
+		"quotes": 0,
+		"linebreak-style": 0,
+		"no-unused-vars": 1,
+		"react/jsx-props-no-spreading": 0,
+		"react/state-in-constructor": 0
+  }
+}
+
+//must start IDE at project root for linting style errors to show up on files
