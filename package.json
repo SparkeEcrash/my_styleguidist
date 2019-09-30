@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "webpack": "babel-node ./node_modules/webpack/bin/webpack --config webpack.prod.config.js",
-    "start": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --config webpack.dev.config.js --hot",
+    "webpack": "babel-node ./node_modules/webpack/bin/webpack --env.mode production",
+    "start": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --env.mode development --hot",
     "lint": "eslint --ext .jsx,.js src/**/*.{js,jsx,ts,tsx}",
     "lint:fix": "eslint --fix --ext .jsx,.js src/**/*.{js,jsx,ts,tsx}",
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-		"styleguide": "styleguidist server",
-		"styleguide:build": "styleguidist build"
+    "styleguide": "styleguidist server",
+		"styleguide:build": "styleguidist build",
+		"webpack:typescript": "npm run webpack -- --env.presets typescript",
+		"webpack:analyze": "npm run webpack -- --env.presets analyze",
+		"webpack:compress": "npm run webpack -- --env.presets compress"
   },
   "keywords": [],
   "author": "",
@@ -42,7 +45,8 @@
     "style-loader": "^1.0.0",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.8.1"
+    "webpack-dev-server": "^3.8.1",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
     "react": "^16.10.1",

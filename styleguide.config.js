@@ -1,4 +1,6 @@
 module.exports = {
+
+
 	// FROM CAM:
 	//  components: "src/components/**/**/[A-Z]*.js",
 	// 	defaultExample: true,
@@ -12,6 +14,21 @@ module.exports = {
 	// 		url: "https://github.com/styleguidist/react-styleguidist"
 	// 	},
 	// 	version,
+
+
+	// theme: {
+  //   color: {
+  //     link: 'firebrick',
+	// 		linkHover: 'salmon',
+	// 		sidebarBackground: 'royalblue'
+  //   },
+  //   fontFamily: {
+  //     base: '"Arial", "Comic Sans MS", cursive'
+	// 	}
+	// },
+	// https://github.com/styleguidist/react-styleguidist/blob/master/src/client/styles/theme.js
+
+	title: "James's Sandbox",
 	webpackConfig: {
 		module: {
 			rules: [
